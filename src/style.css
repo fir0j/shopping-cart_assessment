@@ -62,6 +62,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 5%;
 }
 
 button {
@@ -90,15 +91,19 @@ button:active {
 }
 
 .homepage {
+	position: relative;
 	background-color: navy;
 	opacity: 0.8;
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
+	padding-left: 5%;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
 .homepage > * {
-	flex-basis: 33.3%;
+	flex-basis: 30%;
 	flex-grow: 0;
 }
 

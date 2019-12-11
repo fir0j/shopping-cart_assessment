@@ -6,8 +6,7 @@ export class Cart extends Component {
 		super(props);
 		this.state = {
 			cartItemSelected: '',
-			isSelected: '',
-			from: 'cart'
+			isSelected: ''
 		};
 	}
 
@@ -20,8 +19,8 @@ export class Cart extends Component {
 	};
 
 	render() {
-		const { cartItems, cartTotal } = this.props;
-		const { cartItemSelected, isSelected, from } = this.state;
+		const { cartItems } = this.props;
+		const { cartItemSelected, isSelected } = this.state;
 
 		const TotalPrice = ({ total }) => {
 			return (
@@ -41,7 +40,6 @@ export class Cart extends Component {
 									handleClickToSelect={this.handleClickToSelect}
 									menuItemSelected={cartItemSelected}
 									isSelected={isSelected}
-									from={from}
 								/>
 							</div>
 						</div>

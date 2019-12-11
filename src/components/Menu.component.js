@@ -10,9 +10,7 @@ export default class Menu extends Component {
 			menuItemSelected: '',
 			cartItemSelected: '',
 			isSelected: false,
-			cartItems: [],
-			from: 'menu',
-			cartTotal: ''
+			cartItems: []
 		};
 	}
 
@@ -59,7 +57,7 @@ export default class Menu extends Component {
 
 	render() {
 		const { MenuItems } = this.props;
-		const { menuItemSelected, cartItems, isSelected, cartTotal, menu } = this.state;
+		const { menuItemSelected, cartItems, isSelected, cartTotal } = this.state;
 
 		const cartEmpty = () => {
 			return (
@@ -72,7 +70,7 @@ export default class Menu extends Component {
 
 		return MenuItems.length > 0 ? (
 			<div className="homepage">
-				<div>
+				<div className="cart">
 					{MenuItems.map((MenuItem) => {
 						return (
 							<Item
@@ -81,7 +79,6 @@ export default class Menu extends Component {
 								handleClickToSelect={this.handleClickToSelect}
 								menuItemSelected={menuItemSelected}
 								isSelected={isSelected}
-								from={menu}
 							/>
 						);
 					})}

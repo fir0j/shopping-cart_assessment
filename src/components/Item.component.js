@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class Item extends Component {
 	render() {
-		const { foodItem, handleClickToSelect, menuItemSelected, isSelected, from } = this.props;
+		const { foodItem, handleClickToSelect, menuItemSelected, isSelected } = this.props;
 
 		const selected = isSelected && foodItem.id === menuItemSelected.id ? 'card isSelected' : 'card';
 
@@ -19,14 +19,6 @@ export default class Item extends Component {
 					{/* <img src={require('../images/pizza.jpeg')} alt="pizza" /> */}
 					<h1 className="name">{foodItem.name}</h1>
 					<h2 className="price">${foodItem.price}</h2>
-				</div>
-			);
-		};
-
-		const TotalPrice = () => {
-			return (
-				<div>
-					<h1>{foodItem.price}</h1>
 				</div>
 			);
 		};
