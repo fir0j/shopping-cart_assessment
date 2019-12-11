@@ -6,7 +6,8 @@ export class Cart extends Component {
 		super(props);
 		this.state = {
 			cartItemSelected: '',
-			isSelected: ''
+			isSelected: '',
+			from: 'cart'
 		};
 	}
 
@@ -19,26 +20,35 @@ export class Cart extends Component {
 	};
 
 	render() {
-		const { cartItems } = this.props;
-		const { cartItemSelected, isSelected } = this.state;
+		const { cartItems, cartTotal } = this.props;
+		const { cartItemSelected, isSelected, from } = this.state;
 
+		const TotalPrice = ({ total }) => {
+			return (
+				<div className="totalPrice">
+					<h1>{`Total Price: $${total}`}</h1>
+				</div>
+			);
+		};
 		return cartItems.length > 0 ? (
-			<div className="">
+			<div className="cart">
 				{cartItems.map((cartItem) => {
 					return (
-						<div onClick={() => this.handleClickToSelect(cartItem)}>
+						<div key={cartItem.id} onClick={() => this.handleClickToSelect(cartItem)}>
 							<div>
 								<Item
-									key={cartItem.id}
 									foodItem={cartItem}
 									handleClickToSelect={this.handleClickToSelect}
 									menuItemSelected={cartItemSelected}
 									isSelected={isSelected}
+									from={from}
 								/>
 							</div>
 						</div>
 					);
 				})}
+
+				<TotalPrice total={cartItems.reduce((acc, item) => acc + Number(item.price), 0)} />
 			</div>
 		) : (
 			<div>

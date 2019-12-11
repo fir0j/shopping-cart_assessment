@@ -10,7 +10,9 @@ export default class Menu extends Component {
 			menuItemSelected: '',
 			cartItemSelected: '',
 			isSelected: false,
-			cartItems: []
+			cartItems: [],
+			from: 'menu',
+			cartTotal: ''
 		};
 	}
 
@@ -47,9 +49,17 @@ export default class Menu extends Component {
 		});
 	};
 
+	TotalPrice = () => {
+		const { cartItems } = this.state;
+		const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+		this.setState({
+			cartTotal: total
+		});
+	};
+
 	render() {
 		const { MenuItems } = this.props;
-		const { menuItemSelected, cartItems, isSelected } = this.state;
+		const { menuItemSelected, cartItems, isSelected, cartTotal, menu } = this.state;
 
 		const cartEmpty = () => {
 			return (
@@ -71,6 +81,7 @@ export default class Menu extends Component {
 								handleClickToSelect={this.handleClickToSelect}
 								menuItemSelected={menuItemSelected}
 								isSelected={isSelected}
+								from={menu}
 							/>
 						);
 					})}
@@ -85,6 +96,7 @@ export default class Menu extends Component {
 						cartItems={cartItems}
 						handleClickToSelect={this.handleClickToSelect}
 						getCartItemSelected={this.getCartItemSelected}
+						cartTotal={cartTotal}
 					/>
 				</div>
 			</div>

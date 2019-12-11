@@ -2,7 +2,6 @@
 	margin: 5px;
 	text-align: center;
 	display: flex;
-	border: 2px solid olivedrab;
 	background-color: whitesmoke;
 }
 
@@ -14,11 +13,26 @@
 	margin: 10px;
 }
 
+.cart {
+	background-color: whitesmoke;
+	height: 100%;
+}
 .price {
 	float: right;
-	color: olivedrab;
+	color: black;
 	margin-left: auto;
 	margin-right: 5%;
+}
+
+.totalPrice {
+	float: right;
+	color: black;
+	margin-left: auto;
+	font-size: 1rem;
+	width: 98%;
+	margin-right: 1%;
+	background-color: #ffa500;
+	opacity: 0.7;
 }
 
 .name {
@@ -36,7 +50,7 @@
 	background-color: #ffa500;
 	opacity: 0.8;
 	position: relative;
-	width: 100%;
+	width: 98%;
 	cursor: pointer;
 }
 
