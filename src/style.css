@@ -110,4 +110,9 @@ button:active {
 .cartEmpty {
 	color: grey;
 	text-align: center;
+	background-color: whitesmoke;
+	position: relative;
+	padding-top: 40%;
+	padding-bottom: 48%;
+	height: auto;
 }
