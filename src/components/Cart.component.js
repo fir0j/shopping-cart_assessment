@@ -25,13 +25,15 @@ export class Cart extends Component {
 			<div className="">
 				{cartItems.map((cartItem) => {
 					return (
-						<Item
-							key={cartItem.id}
-							foodItem={cartItem}
-							handleClickToSelect={this.handleClickToSelect}
-							menuItemSelected={cartItemSelected}
-							isSelected={isSelected}
-						/>
+						<div onClick={() => this.props.getCartItemSelected(this.state.cartItemSelected)}>
+							<Item
+								key={cartItem.id}
+								foodItem={cartItem}
+								handleClickToSelect={this.handleClickToSelect}
+								menuItemSelected={cartItemSelected}
+								isSelected={isSelected}
+							/>
+						</div>
 					);
 				})}
 			</div>

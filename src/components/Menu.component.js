@@ -8,6 +8,7 @@ export default class Menu extends Component {
 		super(props);
 		this.state = {
 			menuItemSelected: '',
+			cartItemSelected: '',
 			isSelected: false,
 			cartItems: []
 		};
@@ -20,12 +21,6 @@ export default class Menu extends Component {
 		}));
 	};
 
-	toggleSelected = () => {
-		this.setState({
-			isSelected: !this.state.isSelected
-		});
-	};
-
 	handleAddToCart = () => {
 		if (!this.state.menuItemSelected) {
 			alert('Please Select an Item from the Menu first!');
@@ -36,19 +31,25 @@ export default class Menu extends Component {
 		}
 	};
 
-	handleRemoveFromCart = (cartItemSelected) => {
-		if (!this.state.menuItemSelected) {
+	handleRemoveFromCart = () => {
+		if (!this.state.cartItemSelected) {
 			alert('Please Select an Item from the cart first!');
 		} else {
 			this.setState((state) => ({
-				cartItems: state.cartItems.filter((cartItem) => cartItem.id !== cartItemSelected.id)
+				cartItems: state.cartItems.filter((cartItem) => cartItem.id !== this.state.cartItemSelected.id)
 			}));
 		}
 	};
 
+	getCartItemSelected = (item) => {
+		this.setState({
+			cartItemSelected: item
+		});
+	};
+
 	render() {
 		const { MenuItems } = this.props;
-		const { menuItemSelected, cartItems, isSelected, cartItemSelected } = this.state;
+		const { menuItemSelected, cartItems, isSelected } = this.state;
 
 		const cartEmpty = () => {
 			return (
@@ -83,9 +84,7 @@ export default class Menu extends Component {
 					<Cart
 						cartItems={cartItems}
 						handleClickToSelect={this.handleClickToSelect}
-						menuItemSelected={menuItemSelected}
-						isSelected={isSelected}
-						handleRemoveFromCart={this.handleRemoveFromCart}
+						getCartItemSelected={this.getCartItemSelected}
 					/>
 				</div>
 			</div>
