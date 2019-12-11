@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/FOOD-WEBSITE/static/js/main.561ecb2b.chunk.js",
+    "main.js.map": "/FOOD-WEBSITE/static/js/main.561ecb2b.chunk.js.map",
+    "runtime-main.js": "/FOOD-WEBSITE/static/js/runtime-main.38df3dd0.js",
+    "runtime-main.js.map": "/FOOD-WEBSITE/static/js/runtime-main.38df3dd0.js.map",
+    "static/js/2.c4bfb7a9.chunk.js": "/FOOD-WEBSITE/static/js/2.c4bfb7a9.chunk.js",
+    "static/js/2.c4bfb7a9.chunk.js.map": "/FOOD-WEBSITE/static/js/2.c4bfb7a9.chunk.js.map",
+    "index.html": "/FOOD-WEBSITE/index.html",
+    "precache-manifest.f097b404ca9102c86eb74551ed8cf261.js": "/FOOD-WEBSITE/precache-manifest.f097b404ca9102c86eb74551ed8cf261.js",
+    "service-worker.js": "/FOOD-WEBSITE/service-worker.js"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.38df3dd0.js",
+    "static/js/2.c4bfb7a9.chunk.js",
+    "static/js/main.561ecb2b.chunk.js"
+  ]
+}

@@ -1,0 +1,94 @@
+.card {
+	margin: 5px;
+	text-align: center;
+	display: flex;
+	border: 2px solid olivedrab;
+	background-color: whitesmoke;
+}
+
+.card-photo {
+	position: relative;
+	width: 130px;
+	height: 130px;
+	background-position: center;
+	margin: 10px;
+}
+
+.price {
+	float: right;
+	color: olivedrab;
+	margin-left: auto;
+	margin-right: 5%;
+}
+
+.name {
+	margin-left: 5%;
+}
+
+.price,
+.name {
+	font-size: 2em;
+	display: flex;
+	align-items: center;
+}
+
+.card:hover {
+	background-color: #ffa500;
+	opacity: 0.8;
+	position: relative;
+	width: 100%;
+	cursor: pointer;
+}
+
+.isSelected {
+	background-color: #ffa500;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	position: relative;
+	background-color: orange;
+	border-radius: 35px;
+	width: 10rem;
+	height: 3rem;
+	color: navy;
+	font-style: bolder;
+	font-size: 1rem;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	border-color: navy;
+	opacity: 0.5;
+}
+
+.buttonActive {
+	opacity: 1;
+}
+
+button:active {
+	color: navy;
+	background-color: rgb(241, 100, 34);
+}
+
+.homepage {
+	background-color: navy;
+	opacity: 0.8;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.homepage > * {
+	flex-basis: 33.3%;
+	flex-grow: 0;
+}
+
+.cartEmpty {
+	color: grey;
+	text-align: center;
+}
