@@ -81,6 +81,8 @@ export default class FoodWebsite extends Component {
 			this.setState((state) => ({
 				cartItems: [ ...state.cartItems, state.menuItemSelected ]
 			}));
+		} else {
+			alert('The item is Already in your cart');
 		}
 
 		this.handleClickToUnselectFromMenu();
