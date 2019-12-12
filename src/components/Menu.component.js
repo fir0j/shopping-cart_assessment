@@ -71,6 +71,10 @@ export default class Menu extends Component {
 		return MenuItems.length > 0 ? (
 			<div className="homepage">
 				<div className="cart">
+					<div style={{ textAlign: 'center', fontSize: '25px' }}>
+						<p>Available Options</p>
+					</div>
+					<hr />
 					{MenuItems.map((MenuItem) => {
 						return (
 							<Item

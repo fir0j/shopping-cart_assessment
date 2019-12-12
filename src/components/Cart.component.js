@@ -31,6 +31,10 @@ export class Cart extends Component {
 		};
 		return cartItems.length > 0 ? (
 			<div className="cart">
+				<div style={{ textAlign: 'center', paddingTop: '5px', fontSize: '23px' }}>
+					<p>Your Cart</p>
+				</div>
+				<hr />
 				{cartItems.map((cartItem) => {
 					return (
 						<div key={cartItem.id} onClick={() => this.handleClickToSelect(cartItem)}>
