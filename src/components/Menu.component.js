@@ -22,6 +22,20 @@ export default class Menu extends Component {
 		}));
 	};
 
+	handleClickToUnselectFromMenu = () => {
+		this.setState((state) => ({
+			menuItemSelected: '',
+			isSelectedFromMenu: false
+		}));
+	};
+
+	handleClickToUnselectFromCart = () => {
+		this.setState((state) => ({
+			cartItemSelected: '',
+			isSelectedFromCart: false
+		}));
+	};
+
 	handleAddToCart = () => {
 		if (!this.state.menuItemSelected) {
 			alert('Please Select an Item from the Menu first!');
@@ -30,6 +44,8 @@ export default class Menu extends Component {
 				cartItems: [ ...state.cartItems, state.menuItemSelected ]
 			}));
 		}
+
+		this.handleClickToUnselectFromMenu();
 	};
 
 	handleRemoveFromCart = () => {
@@ -40,6 +56,7 @@ export default class Menu extends Component {
 				cartItems: state.cartItems.filter((cartItem) => cartItem.id !== this.state.cartItemSelected.id)
 			}));
 		}
+		this.handleClickToUnselectFromCart();
 	};
 
 	getCartItemSelected = (item, isSelectedFromCart) => {
