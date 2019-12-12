@@ -66,9 +66,18 @@ export default class FoodWebsite extends Component {
 	};
 
 	handleAddToCart = () => {
-		if (!this.state.menuItemSelected) {
-			alert('Please Select an Item from the Menu first!');
-		} else {
+		const { cartItems, menuItemSelected } = this.state;
+		let itemAlreadyInCart = false;
+		if (cartItems.length > 0) {
+			cartItems.forEach((item) => {
+				if (item.id === menuItemSelected.id) {
+					console.log('item is:', item.id, 'selected is', menuItemSelected.id);
+					itemAlreadyInCart = true;
+				}
+			});
+		}
+
+		if (!itemAlreadyInCart) {
 			this.setState((state) => ({
 				cartItems: [ ...state.cartItems, state.menuItemSelected ]
 			}));
