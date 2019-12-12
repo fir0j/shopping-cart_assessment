@@ -33,7 +33,7 @@ export default class Buttons extends Component {
 			);
 		};
 		return (
-			<div>
+			<div className="buttons">
 				<AddButton />
 				<RemoveButton />
 			</div>

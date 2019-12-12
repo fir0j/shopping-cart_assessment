@@ -17,8 +17,8 @@ export default class Item extends Component {
 					/>
 					{/* <img src="https://fakeimg.pl/250x100/ff0000/" alt="pizza" /> */}
 					{/* <img src={require('../images/pizza.jpeg')} alt="pizza" /> */}
-					<h1 className="name">{foodItem.name}</h1>
-					<h2 className="price">${foodItem.price}</h2>
+					<h3 className="name">{foodItem.name}</h3>
+					<h4 className="price">${foodItem.price}</h4>
 				</div>
 			);
 		};

@@ -1,27 +1,78 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.homepage {
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	width: 80%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: navy;
+	opacity: 0.8;
+	text-align: center;
+}
+
+.homepage > * {
+	flex-basis: 30%;
+	flex-grow: 1;
+}
+
+.container {
+	position: relative;
+	background-color: whitesmoke;
+	height: auto;
+	margin: 10px;
+}
+
 .card {
+	position: relative;
+	display: flex;
+	width: auto;
+	height: 100%;
 	margin: 5px;
 	text-align: center;
-	display: flex;
 	background-color: whitesmoke;
 }
 
 .card-photo {
 	position: relative;
-	width: 130px;
-	height: 130px;
-	background-position: center;
+	width: 100px;
+	height: 100px;
 	margin: 10px;
+	background-position: center;
 }
 
-.cart {
-	background-color: whitesmoke;
-	height: 100%;
+.card:hover {
+	background-color: #ffa500;
+	opacity: 0.8;
+	position: relative;
+	width: 98%;
+	cursor: pointer;
 }
+
+.cartEmpty {
+	color: grey;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-flow: column;
+}
+
 .price {
 	float: right;
 	color: black;
 	margin-left: auto;
 	margin-right: 5%;
+}
+
+.name {
+	margin-left: 5%;
 }
 
 .totalPrice {
@@ -35,27 +86,29 @@
 	opacity: 0.7;
 }
 
-.name {
-	margin-left: 5%;
-}
-
 .price,
 .name {
-	font-size: 2em;
+	font-size: 1.2em;
 	display: flex;
 	align-items: center;
 }
 
-.card:hover {
-	background-color: #ffa500;
-	opacity: 0.8;
-	position: relative;
-	width: 98%;
-	cursor: pointer;
-}
-
 .isSelected {
 	background-color: #ffa500;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: inherit;
+	align-content: center;
+	justify-content: center;
+}
+
+.buttonPassive {
+	opacity: 0.5;
+	cursor: auto;
 }
 
 button {
@@ -73,46 +126,7 @@ button {
 	border-color: navy;
 }
 
-.buttons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 5%;
-}
-
-.buttonPassive {
-	opacity: 0.5;
-	cursor: auto;
-}
-
 button:active {
 	color: navy;
 	background-color: rgb(241, 100, 34);
-}
-
-.homepage {
-	position: relative;
-	background-color: navy;
-	opacity: 0.8;
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	padding-left: 5%;
-	padding-top: 2%;
-	padding-bottom: 2%;
-}
-
-.homepage > * {
-	flex-basis: 30%;
-	flex-grow: 0;
-}
-
-.cartEmpty {
-	color: grey;
-	text-align: center;
-	background-color: whitesmoke;
-	position: relative;
-	padding-top: 40%;
-	padding-bottom: 90%;
-	height: auto;
 }

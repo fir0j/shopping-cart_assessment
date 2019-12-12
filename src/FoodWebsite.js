@@ -1,12 +1,21 @@
+//Note Component first Letter must be Capital
+
 import React, { Component } from 'react';
-import Menu from './components/Menu.component';
+import { Cart } from './components/Cart.component';
+import Buttons from './components/Buttons.component';
+import Item from './components/Item.component';
 import './style.css';
 
-class FoodWebsite extends Component {
-	constructor(props, context) {
-		super(props, context);
+export default class FoodWebsite extends Component {
+	constructor(props) {
+		super(props);
 		this.state = {
-			foodItems: [
+			menuItemSelected: '',
+			cartItemSelected: '',
+			isSelectedFromMenu: false,
+			isSelectedFromCart: false,
+			cartItems: [],
+			MenuItems: [
 				{
 					photoUrl: 'https://fakeimg.pl/250x100/ff0000/',
 					name: 'pizza',
@@ -31,22 +40,130 @@ class FoodWebsite extends Component {
 					price: '2.99',
 					id: 4
 				}
-			],
-			activateButton: false
+			]
 		};
 	}
 
-	render() {
-		const { foodItems } = this.state;
+	handleClickToSelect = (selected) => {
+		this.setState((state) => ({
+			menuItemSelected: selected,
+			isSelectedFromMenu: true
+		}));
+	};
 
-		return (
-			<div>
-				<div>
-					<Menu MenuItems={foodItems} />
+	handleClickToUnselectFromMenu = () => {
+		this.setState((state) => ({
+			menuItemSelected: '',
+			isSelectedFromMenu: false
+		}));
+	};
+
+	handleClickToUnselectFromCart = () => {
+		this.setState((state) => ({
+			cartItemSelected: '',
+			isSelectedFromCart: false
+		}));
+	};
+
+	handleAddToCart = () => {
+		if (!this.state.menuItemSelected) {
+			alert('Please Select an Item from the Menu first!');
+		} else {
+			this.setState((state) => ({
+				cartItems: [ ...state.cartItems, state.menuItemSelected ]
+			}));
+		}
+
+		this.handleClickToUnselectFromMenu();
+	};
+
+	handleRemoveFromCart = () => {
+		if (!this.state.cartItemSelected) {
+			alert('Please Select an Item from the cart first!');
+		} else {
+			this.setState((state) => ({
+				cartItems: state.cartItems.filter((cartItem) => cartItem.id !== this.state.cartItemSelected.id)
+			}));
+		}
+		this.handleClickToUnselectFromCart();
+	};
+
+	getCartItemSelected = (item, isSelectedFromCart) => {
+		this.setState({
+			cartItemSelected: item,
+			isSelectedFromCart: isSelectedFromCart
+		});
+	};
+
+	TotalPrice = () => {
+		const { cartItems } = this.state;
+		const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+		this.setState({
+			cartTotal: total
+		});
+	};
+
+	render() {
+		const {
+			MenuItems,
+			menuItemSelected,
+			cartItems,
+			isSelectedFromMenu,
+			cartTotal,
+			isSelectedFromCart
+		} = this.state;
+
+		const ListMenuItems = () => {
+			return (
+				<div className="container">
+					<div style={{ textAlign: 'center', fontSize: '25px' }}>
+						<p>Available Options</p>
+					</div>
+					<hr />
+					{MenuItems.map((MenuItem) => {
+						return (
+							<Item
+								key={MenuItem.id}
+								foodItem={MenuItem}
+								handleClickToSelect={this.handleClickToSelect}
+								menuItemSelected={menuItemSelected}
+								isSelected={isSelectedFromMenu}
+							/>
+						);
+					})}
 				</div>
+			);
+		};
+
+		const MenuEmpty = () => {
+			return (
+				<div>
+					<div className="container cartEmpty">
+						<h2>Food Items are comming soon...</h2>
+					</div>
+				</div>
+			);
+		};
+
+		return MenuItems.length > 0 ? (
+			<div className="homepage">
+				<ListMenuItems />
+				<Buttons
+					handleAddToCart={this.handleAddToCart}
+					handleRemoveFromCart={this.handleRemoveFromCart}
+					isSelectedFromMenu={isSelectedFromMenu}
+					isSelectedFromCart={isSelectedFromCart}
+				/>
+
+				<Cart
+					cartItems={cartItems}
+					handleClickToSelect={this.handleClickToSelect}
+					getCartItemSelected={this.getCartItemSelected}
+					cartTotal={cartTotal}
+				/>
 			</div>
+		) : (
+			<MenuEmpty />
 		);
 	}
 }
-
-export default FoodWebsite;

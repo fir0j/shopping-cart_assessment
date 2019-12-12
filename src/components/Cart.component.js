@@ -26,12 +26,22 @@ export class Cart extends Component {
 		const TotalPrice = ({ total }) => {
 			return (
 				<div className="totalPrice">
-					<h1>{`Total Price: $${total}`}</h1>
+					<h1>{`Total Amount: $${total}`}</h1>
 				</div>
 			);
 		};
+
+		const CartEmpty = () => {
+			return (
+				<div className="container cartEmpty">
+					<h2>Your cart is empty</h2>
+					<h5>Select an item and click "Add to cart"</h5>
+				</div>
+			);
+		};
+
 		return cartItems.length > 0 ? (
-			<div className="cart">
+			<div className="container">
 				<div style={{ textAlign: 'center', paddingTop: '5px', fontSize: '23px' }}>
 					<p>Your Cart</p>
 				</div>
@@ -51,15 +61,10 @@ export class Cart extends Component {
 					);
 				})}
 
-				<TotalPrice total={cartItems.reduce((acc, item) => acc + Number(item.price), 0)} />
+				<TotalPrice total={cartItems.reduce((acc, item) => acc + Number(item.price), 0).toFixed(2)} />
 			</div>
 		) : (
-			<div>
-				<div className="cartEmpty">
-					<h2>Your cart is empty</h2>
-					<h5>Select an item and click "Add to cart"</h5>
-				</div>
-			</div>
+			<CartEmpty />
 		);
 	}
 }
