@@ -9,7 +9,8 @@ export default class Menu extends Component {
 		this.state = {
 			menuItemSelected: '',
 			cartItemSelected: '',
-			isSelected: false,
+			isSelectedFromMenu: false,
+			isSelectedFromCart: false,
 			cartItems: []
 		};
 	}
@@ -17,7 +18,7 @@ export default class Menu extends Component {
 	handleClickToSelect = (selected) => {
 		this.setState((state) => ({
 			menuItemSelected: selected,
-			isSelected: true
+			isSelectedFromMenu: true
 		}));
 	};
 
@@ -41,9 +42,10 @@ export default class Menu extends Component {
 		}
 	};
 
-	getCartItemSelected = (item) => {
+	getCartItemSelected = (item, isSelectedFromCart) => {
 		this.setState({
-			cartItemSelected: item
+			cartItemSelected: item,
+			isSelectedFromCart: isSelectedFromCart
 		});
 	};
 
@@ -57,7 +59,7 @@ export default class Menu extends Component {
 
 	render() {
 		const { MenuItems } = this.props;
-		const { menuItemSelected, cartItems, isSelected, cartTotal } = this.state;
+		const { menuItemSelected, cartItems, isSelectedFromMenu, cartTotal, isSelectedFromCart } = this.state;
 
 		const cartEmpty = () => {
 			return (
@@ -82,14 +84,19 @@ export default class Menu extends Component {
 								foodItem={MenuItem}
 								handleClickToSelect={this.handleClickToSelect}
 								menuItemSelected={menuItemSelected}
-								isSelected={isSelected}
+								isSelected={isSelectedFromMenu}
 							/>
 						);
 					})}
 				</div>
 
 				<div className="buttons">
-					<Buttons handleAddToCart={this.handleAddToCart} handleRemoveFromCart={this.handleRemoveFromCart} />
+					<Buttons
+						handleAddToCart={this.handleAddToCart}
+						handleRemoveFromCart={this.handleRemoveFromCart}
+						isSelectedFromMenu={isSelectedFromMenu}
+						isSelectedFromCart={isSelectedFromCart}
+					/>
 				</div>
 
 				<div>

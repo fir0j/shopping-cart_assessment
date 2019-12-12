@@ -6,21 +6,22 @@ export class Cart extends Component {
 		super(props);
 		this.state = {
 			cartItemSelected: '',
-			isSelected: ''
+			isSelectedFromCart: false
 		};
 	}
 
 	handleClickToSelect = (cartItem) => {
 		this.setState((state) => ({
 			cartItemSelected: cartItem,
-			isSelected: true
+			isSelectedFromCart: true
 		}));
-		this.props.getCartItemSelected(cartItem);
+		const isSelectedFromCart = true;
+		this.props.getCartItemSelected(cartItem, isSelectedFromCart);
 	};
 
 	render() {
 		const { cartItems } = this.props;
-		const { cartItemSelected, isSelected } = this.state;
+		const { cartItemSelected, isSelectedFromCart } = this.state;
 
 		const TotalPrice = ({ total }) => {
 			return (
@@ -43,7 +44,7 @@ export class Cart extends Component {
 									foodItem={cartItem}
 									handleClickToSelect={this.handleClickToSelect}
 									menuItemSelected={cartItemSelected}
-									isSelected={isSelected}
+									isSelected={isSelectedFromCart}
 								/>
 							</div>
 						</div>

@@ -58,13 +58,6 @@
 	background-color: #ffa500;
 }
 
-.buttons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 5%;
-}
-
 button {
 	position: relative;
 	background-color: orange;
@@ -78,11 +71,18 @@ button {
 	cursor: pointer;
 	text-align: center;
 	border-color: navy;
-	opacity: 0.5;
 }
 
-.buttonActive {
-	opacity: 1;
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 5%;
+}
+
+.buttonPassive {
+	opacity: 0.5;
+	cursor: auto;
 }
 
 button:active {
@@ -113,6 +113,6 @@ button:active {
 	background-color: whitesmoke;
 	position: relative;
 	padding-top: 40%;
-	padding-bottom: 48%;
+	padding-bottom: 90%;
 	height: auto;
 }
