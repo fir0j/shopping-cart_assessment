@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -36,7 +38,8 @@ nav {
 	top: 15px;
 	z-index: 1;
 	width: 100%;
-	font-size: 1.1vw;
+	font-size: 1.2vw;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 nav ul {
@@ -89,11 +92,16 @@ nav ul li:last-child {
 	align-self: center;
 	justify-self: center;
 	margin-left: auto;
-	font-size: 1.1vw;
+	font-size: 1.2vw;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 0.3rem;
 }
 
 .content p {
 	line-height: 1.3rem;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: gray;
+	letter-spacing: normal;
 }
 
 .content input {
@@ -109,6 +117,33 @@ nav ul li:last-child {
 	margin: 5% 2%;
 	font-size: 1.2vw;
 }
+
+.content input:hover {
+	background-color: rgb(218, 146, 12);
+}
+
+.content input {
+	-webkit-animation: action 1s infinite alternate;
+	animation: action 1s infinite alternate;
+}
+
+@-webkit-keyframes action {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+@keyframes action {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
 .content ul li {
 	margin-right: 4%;
 	cursor: pointer;
