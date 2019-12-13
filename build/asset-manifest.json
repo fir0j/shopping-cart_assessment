@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.js": "/FOOD-WEBSITE/static/js/main.561ecb2b.chunk.js",
-    "main.js.map": "/FOOD-WEBSITE/static/js/main.561ecb2b.chunk.js.map",
-    "runtime-main.js": "/FOOD-WEBSITE/static/js/runtime-main.38df3dd0.js",
-    "runtime-main.js.map": "/FOOD-WEBSITE/static/js/runtime-main.38df3dd0.js.map",
-    "static/js/2.c4bfb7a9.chunk.js": "/FOOD-WEBSITE/static/js/2.c4bfb7a9.chunk.js",
-    "static/js/2.c4bfb7a9.chunk.js.map": "/FOOD-WEBSITE/static/js/2.c4bfb7a9.chunk.js.map",
-    "index.html": "/FOOD-WEBSITE/index.html",
-    "precache-manifest.f097b404ca9102c86eb74551ed8cf261.js": "/FOOD-WEBSITE/precache-manifest.f097b404ca9102c86eb74551ed8cf261.js",
-    "service-worker.js": "/FOOD-WEBSITE/service-worker.js"
+    "main.css": "/shopping-cart_assessment/static/css/main.810dfc0e.chunk.css",
+    "main.js": "/shopping-cart_assessment/static/js/main.adb22e94.chunk.js",
+    "main.js.map": "/shopping-cart_assessment/static/js/main.adb22e94.chunk.js.map",
+    "runtime-main.js": "/shopping-cart_assessment/static/js/runtime-main.6df1942a.js",
+    "runtime-main.js.map": "/shopping-cart_assessment/static/js/runtime-main.6df1942a.js.map",
+    "static/js/2.746de4c8.chunk.js": "/shopping-cart_assessment/static/js/2.746de4c8.chunk.js",
+    "static/js/2.746de4c8.chunk.js.map": "/shopping-cart_assessment/static/js/2.746de4c8.chunk.js.map",
+    "index.html": "/shopping-cart_assessment/index.html",
+    "precache-manifest.9bb5b861a8abbd1a7c16a054f9871418.js": "/shopping-cart_assessment/precache-manifest.9bb5b861a8abbd1a7c16a054f9871418.js",
+    "service-worker.js": "/shopping-cart_assessment/service-worker.js",
+    "static/css/main.810dfc0e.chunk.css.map": "/shopping-cart_assessment/static/css/main.810dfc0e.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.38df3dd0.js",
-    "static/js/2.c4bfb7a9.chunk.js",
-    "static/js/main.561ecb2b.chunk.js"
+    "static/js/runtime-main.6df1942a.js",
+    "static/js/2.746de4c8.chunk.js",
+    "static/css/main.810dfc0e.chunk.css",
+    "static/js/main.adb22e94.chunk.js"
   ]
 }

@@ -17,25 +17,25 @@ export default class FoodWebsite extends Component {
 			cartItems: [],
 			MenuItems: [
 				{
-					photoUrl: 'https://fakeimg.pl/250x100/ff0000/',
+					photoUrl: 'https://source.unsplash.com/MqT0asuoIcU/111x111',
 					name: 'pizza',
 					price: '5.99',
 					id: 1
 				},
 				{
-					photoUrl: 'https://fakeimg.pl/250x100/ff0000/',
+					photoUrl: 'https://source.unsplash.com/9G_oJBKwi1c/111x111',
 					name: 'burger',
 					price: '2.99',
 					id: 2
 				},
 				{
-					photoUrl: 'https://fakeimg.pl/250x100/ff0000/',
+					photoUrl: 'https://source.unsplash.com/7zfQ6sbWVyE/111x111',
 					name: 'Chicken Pasta',
 					price: '2.99',
 					id: 3
 				},
 				{
-					photoUrl: 'https://fakeimg.pl/250x100/ff0000/',
+					photoUrl: 'https://source.unsplash.com/foHj73zCV3Y/111x111',
 					name: 'Grilled Sandwich',
 					price: '2.99',
 					id: 4
@@ -157,7 +157,8 @@ export default class FoodWebsite extends Component {
 		};
 
 		return MenuItems.length > 0 ? (
-			<div className="homepage">
+			<div className="homepage overlay">
+				{/* <img src="https://fakeimg.pl/250x100/ff0000/" alt="pizza" /> */}
 				<ListMenuItems />
 				<Buttons
 					handleAddToCart={this.handleAddToCart}
