@@ -12,17 +12,18 @@
 .bgImage {
 	background-size: cover;
 	background-repeat: no-repeat;
-	clip-path: polygon(20% 7%, 32% 0, 100% 0, 100% 73%, 78% 86%, 49% 84%, 29% 74%, 33% 53%, 22% 34%, 16% 18%);
+	/* clip-path: polygon(20% 7%, 32% 0, 100% 0, 100% 73%, 78% 86%, 49% 84%, 29% 74%, 33% 53%, 22% 34%, 16% 18%); */
 
 	margin-top: 0;
 	margin-left: auto;
 	width: 50%;
 	height: 600px;
 	position: relative;
+	border-bottom-left-radius: 300px;
 }
 
 .backgroundContainer {
-	background-color: lightblue;
+	/* background-color: lightblue; */
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -102,6 +103,7 @@ nav ul li:last-child {
 }
 .content ul li {
 	margin-right: 4%;
+	cursor: pointer;
 }
 
 .content button:active {
@@ -109,6 +111,9 @@ nav ul li:last-child {
 	box-shadow: 5px solid grey;
 }
 
+.content span {
+	color: orange;
+}
 .icons {
 	display: flex;
 	list-style: none;
