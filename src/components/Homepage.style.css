@@ -1,0 +1,109 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.landingPage {
+	position: absolute;
+	width: 100%;
+	height: auto;
+}
+
+.bgImage {
+	background-size: cover;
+	background-repeat: no-repeat;
+	clip-path: polygon(20% 7%, 32% 0, 100% 0, 100% 73%, 78% 86%, 49% 84%, 29% 74%, 33% 53%, 22% 34%, 16% 18%);
+
+	margin-top: 0;
+	margin-left: auto;
+	width: 50%;
+	height: 600px;
+	position: relative;
+}
+
+.backgroundContainer {
+	background-color: lightblue;
+	width: 100%;
+	height: auto;
+	display: flex;
+	position: absolute;
+	top: 0;
+}
+
+nav {
+	position: absolute;
+	top: 15px;
+	z-index: 1;
+	width: 100%;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	background-color: transparent;
+}
+
+nav ul li {
+	cursor: pointer;
+}
+
+nav ul li:hover {
+	background-color: orange;
+}
+
+nav ul li:first-child {
+	margin-right: auto;
+	margin-left: 5%;
+}
+
+nav ul li:nth-child(n + 2) {
+	margin-left: 5%;
+	margin-right: 1%;
+	color: white;
+}
+
+nav ul li span {
+	color: orange;
+	font-weight: bolder;
+	font-size: larger;
+}
+
+nav ul li:last-child {
+	border: 2px solid orange;
+	border-radius: 20px;
+	background-color: orange;
+	padding: 5px;
+}
+
+.content {
+	margin-top: 30%;
+	border: 2px solid green;
+}
+
+.content button {
+	padding: 10px;
+	width: 150px;
+	border-radius: 20px;
+	outline: none;
+	border: none;
+	background-color: orange;
+	opacity: 0.8;
+	color: white;
+	cursor: pointer;
+}
+
+.content button:active {
+	background-color: rgb(167, 114, 17);
+	box-shadow: 5px solid grey;
+}
+
+.icons {
+	display: flex;
+	list-style: none;
+	color: gray;
+	padding-left: 10%;
+}
+
+.icons li {
+	margin-left: 5px;
+}
