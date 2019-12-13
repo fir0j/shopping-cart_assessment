@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/shopping-cart_assessment/static/css/main.810dfc0e.chunk.css",
-    "main.js": "/shopping-cart_assessment/static/js/main.adb22e94.chunk.js",
-    "main.js.map": "/shopping-cart_assessment/static/js/main.adb22e94.chunk.js.map",
+    "main.css": "/shopping-cart_assessment/static/css/main.9b86c6b3.chunk.css",
+    "main.js": "/shopping-cart_assessment/static/js/main.bdda30d8.chunk.js",
+    "main.js.map": "/shopping-cart_assessment/static/js/main.bdda30d8.chunk.js.map",
     "runtime-main.js": "/shopping-cart_assessment/static/js/runtime-main.6df1942a.js",
     "runtime-main.js.map": "/shopping-cart_assessment/static/js/runtime-main.6df1942a.js.map",
     "static/js/2.746de4c8.chunk.js": "/shopping-cart_assessment/static/js/2.746de4c8.chunk.js",
     "static/js/2.746de4c8.chunk.js.map": "/shopping-cart_assessment/static/js/2.746de4c8.chunk.js.map",
     "index.html": "/shopping-cart_assessment/index.html",
-    "precache-manifest.9bb5b861a8abbd1a7c16a054f9871418.js": "/shopping-cart_assessment/precache-manifest.9bb5b861a8abbd1a7c16a054f9871418.js",
+    "precache-manifest.956ec4cbd9560e593075dcdf62ecd9d7.js": "/shopping-cart_assessment/precache-manifest.956ec4cbd9560e593075dcdf62ecd9d7.js",
     "service-worker.js": "/shopping-cart_assessment/service-worker.js",
-    "static/css/main.810dfc0e.chunk.css.map": "/shopping-cart_assessment/static/css/main.810dfc0e.chunk.css.map"
+    "static/css/main.9b86c6b3.chunk.css.map": "/shopping-cart_assessment/static/css/main.9b86c6b3.chunk.css.map",
+    "static/media/pizza.jpeg": "/shopping-cart_assessment/static/media/pizza.1a4e6340.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.6df1942a.js",
     "static/js/2.746de4c8.chunk.js",
-    "static/css/main.810dfc0e.chunk.css",
-    "static/js/main.adb22e94.chunk.js"
+    "static/css/main.9b86c6b3.chunk.css",
+    "static/js/main.bdda30d8.chunk.js"
   ]
 }
