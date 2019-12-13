@@ -25,9 +25,11 @@ export const Homepage = () => {
 		return (
 			<div className="content">
 				<h2>Have no time</h2>
+				<br />
 				<h2>
 					to prepare <span>food</span>?
 				</h2>
+				<br />
 				<p>Choose one of our plans, enter delivery time</p>
 				<p>and enjoy delicious food without leaving your home!</p>
 				<button type="button">Order food</button>

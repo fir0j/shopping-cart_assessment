@@ -76,8 +76,16 @@ nav ul li:last-child {
 }
 
 .content {
-	margin-top: 30%;
-	border: 2px solid green;
+	display: flexbox;
+	position: relative;
+	height: fit-content;
+	align-self: center;
+	justify-self: center;
+	margin-left: auto;
+}
+
+.content p {
+	line-height: 1.3rem;
 }
 
 .content button {
@@ -90,6 +98,10 @@ nav ul li:last-child {
 	opacity: 0.8;
 	color: white;
 	cursor: pointer;
+	margin: 5% 2%;
+}
+.content ul li {
+	margin-right: 4%;
 }
 
 .content button:active {
