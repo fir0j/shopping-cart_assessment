@@ -96,7 +96,7 @@ nav ul li:last-child {
 	line-height: 1.3rem;
 }
 
-.content button {
+.content input {
 	padding: 10px;
 	width: 15vw;
 	border-radius: 20px;

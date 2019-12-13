@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faCamera, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { faTwitterSquare, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-export const Homepage = () => {
+export const Homepage = (props) => {
 	const Navbar = () => {
 		return (
 			<nav>
@@ -32,7 +32,7 @@ export const Homepage = () => {
 				<br />
 				<p>Choose one of our plans, enter delivery time</p>
 				<p>and enjoy delicious food without leaving your home!</p>
-				<button type="button">Order food</button>
+				<input type="button" onClick={() => props.handleOrderFood('cartPage')} value="Order food" />
 				<ul className="icons">
 					<li>
 						<FontAwesomeIcon icon={faTwitterSquare} />

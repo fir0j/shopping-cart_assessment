@@ -157,22 +157,29 @@ export default class CartPage extends Component {
 		};
 
 		return MenuItems.length > 0 ? (
-			<div className="homepage overlay">
-				{/* <img src="https://fakeimg.pl/250x100/ff0000/" alt="pizza" /> */}
-				<ListMenuItems />
-				<Buttons
-					handleAddToCart={this.handleAddToCart}
-					handleRemoveFromCart={this.handleRemoveFromCart}
-					isSelectedFromMenu={isSelectedFromMenu}
-					isSelectedFromCart={isSelectedFromCart}
+			<div>
+				<input
+					type="button"
+					onClick={() => this.props.handleOrderFood('homepage')}
+					value="Go Back"
+					className="backButton"
 				/>
+				<div className="homepage overlay">
+					<ListMenuItems />
+					<Buttons
+						handleAddToCart={this.handleAddToCart}
+						handleRemoveFromCart={this.handleRemoveFromCart}
+						isSelectedFromMenu={isSelectedFromMenu}
+						isSelectedFromCart={isSelectedFromCart}
+					/>
 
-				<Cart
-					cartItems={cartItems}
-					handleClickToSelect={this.handleClickToSelect}
-					getCartItemSelected={this.getCartItemSelected}
-					cartTotal={cartTotal}
-				/>
+					<Cart
+						cartItems={cartItems}
+						handleClickToSelect={this.handleClickToSelect}
+						getCartItemSelected={this.getCartItemSelected}
+						cartTotal={cartTotal}
+					/>
+				</div>
 			</div>
 		) : (
 			<MenuEmpty />

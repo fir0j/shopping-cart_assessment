@@ -1,11 +1,10 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 
 .homepage {
-	position: relative;
+	position: absolute;
 	left: 10%;
 	top: 10%;
 	width: 80%;
@@ -136,4 +135,18 @@ button {
 button:active {
 	color: navy;
 	background-color: rgb(241, 100, 34);
+}
+
+.backButton {
+	border-radius: 20px;
+	width: 10%;
+	margin-top: 10px;
+	height: 40px;
+	outline: none;
+	border: none;
+	background-color: orange;
+	opacity: 0.8;
+	color: white;
+	cursor: pointer;
+	font-size: 1.2vw;
 }
