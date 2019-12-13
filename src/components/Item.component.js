@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import Pizza from '../images/pizza.jpeg';
 
 export default class Item extends Component {
 	render() {
 		const { foodItem, handleClickToSelect, menuItemSelected, isSelected } = this.props;
 
 		const selected = isSelected && foodItem.id === menuItemSelected.id ? 'card isSelected' : 'card';
-		const name = 'Pizza';
-		const altTag = 'pizza';
 
 		const Item = () => {
 			return (
